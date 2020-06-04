@@ -1,5 +1,7 @@
 # team-1-space-explorer-backend
 
+Backend URl: https://api-space-explorer.herokuapp.com/
+
 ## Project Rubics
 | Requirement | Description |
 | --- | --- |
