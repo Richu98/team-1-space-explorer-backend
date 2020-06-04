@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const cors = require('cors');
 
 //set up express App
 const app = express();
@@ -10,6 +11,9 @@ mongoose.connect('mongodb+srv://anikate12:anikate123@cluster0-py51n.mongodb.net/
 
 //creating middleware of bodyParser
 app.use(bodyParser.json());
+
+//enabling cors
+app.use(cors());
 
 //initializing routes
 app.use('/api',require('./routes/api'));

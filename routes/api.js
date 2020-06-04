@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 const Astronaut = require('../models/astronauts');
 
-//get a list of ninjas from db
+//get a list of astronauts from db
 
 router.get('/astronauts',function(req,res,next){
-    let filter = {teamName : req.query.teamName}
+    let filter = {_id : req.query.id}
     Astronaut.find(filter,function(err,data){
         if (err) throw err;        
         res.send(data);
