@@ -25,7 +25,7 @@ const  astronautSchema = new Schema({
     },
     pictures :{
         type : String,
-        required : [ true,'Mission Picture field is required
+        required : [ true,'Mission Picture field is required']
     }
 
 });
