@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-let  astronautSchema = new Schema({
+const  astronautSchema = new Schema({
     teamName :{
         type : String,
         required : [true,'Name field is required']
@@ -11,7 +11,7 @@ let  astronautSchema = new Schema({
         required : [true,'destination field is required']
     },
     teamMembers : {
-        type : String,
+        type : String[]
         required : [true,'there must be atleast one team member']
         
     },
