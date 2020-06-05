@@ -11,7 +11,7 @@ const  astronautSchema = new Schema({
         required : [true,'destination field is required']
     },
     teamMembers : {
-        type : String[]
+        type : [String],
         required : [true,'there must be atleast one team member']
         
     },
@@ -24,9 +24,7 @@ const  astronautSchema = new Schema({
         required : [true,'Mission Name field is required']
     },
     pictures :{
-        type : String
-       
-       
+        type : [String]      
     }
 
 });
