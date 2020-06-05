@@ -29,6 +29,6 @@ const  astronautSchema = new Schema({
 
 });
 
-const astronaut = mongoose.model('astronaut',astronautSchema);
+const Astronaut = mongoose.model('astronaut',astronautSchema);
 
-module.exports = astronaut;
+module.exports = Astronaut;
