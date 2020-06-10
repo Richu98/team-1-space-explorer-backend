@@ -26,7 +26,7 @@ const  astronautSchema = new Schema({
     pictures :{
         type : [String]
     }
-
+    
 });
 
 const Astronaut = mongoose.model('astronaut',astronautSchema);
