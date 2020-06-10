@@ -5,7 +5,7 @@ const Astronaut = require('../models/astronauts');
 //get a list of astronauts from db
 
 router.get('/astronauts',function(req,res,next){
-    let filter = {_id : req.query.id,}
+    let filter = {_id : req.query.id}
     Astronaut.find(filter,function(err,data){
         if (err) throw err;        
         res.send(data);
