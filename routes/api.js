@@ -28,6 +28,16 @@ router.put('/astronauts/:id',function(req,res,next){
     });
 });
 
+
+//updating the pictures in db
+router.put('/astronauts/pictures/:id',function(req,res,next){
+    Astronaut.findByIdAndUpdate({_id: req.params.id},{$push:{pictures:{$each: req.body.pictures}}}).then(function(){
+        Astronaut.findOne({_id : req.params.id}).then(function(astronaut){
+            res.send(astronaut);
+        });
+    });
+});
+
 //deleting a astronaut from the db
 router.delete('/astronauts/:id',function(req,res,next){
     Astronaut.findByIdAndRemove({_id: req.params.id}).then(function(astronaut){
