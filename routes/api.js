@@ -6,6 +6,7 @@ const Astronaut = require('../models/astronauts');
 
 router.get('/astronauts',function(req,res,next){
     let filter = {_id : req.query.id, isDeleted  : false}
+
     Astronaut.find(filter,function(err,data){
         if (data.length >0){
             res.send(data);

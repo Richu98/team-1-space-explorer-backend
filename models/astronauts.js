@@ -24,11 +24,13 @@ const  astronautSchema = new Schema({
         required : [true,'Mission Name field is required']
     },
     pictures :{
+
         type : [String]
     },
     isDeleted : {
         type : Boolean,
         default : false
+
     }
     
 });
